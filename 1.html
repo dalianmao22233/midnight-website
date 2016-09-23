@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript">
+
+
+        $(document).ready(function () {
+           
+        
+        
+        $(".t1").click(function () {
+            document.getElementById("PROJECTS").style.display="none";
+            document.getElementById("SHOP_ALL").style.display="none";
+            document.getElementById("CART").style.display="none";
+            $("#COLLECTIONS").toggle();
+        });
+        $(".t2").click(function () {
+            document.getElementById("COLLECTIONS").style.display="none";
+
+            document.getElementById("SHOP_ALL").style.display="none";
+            document.getElementById("CART").style.display="none";
+            $("#PROJECTS").toggle();
+        });
+        $(".t3").click(function () {
+            document.getElementById("COLLECTIONS").style.display="none";
+            document.getElementById("PROJECTS").style.display="none";
+            document.getElementById("CART").style.display="none";
+            $("#SHOP_ALL").toggle();
+        });
+        $(".t4").click(function () {
+            document.getElementById("COLLECTIONS").style.display="none";
+            document.getElementById("PROJECTS").style.display="none";
+            document.getElementById("SHOP_ALL").style.display="none";
+            $("#CART").toggle();
+        });
+        var $container = $('.zoomIn');
+    var $image = $container.find('.zoom');
+    var $imageW = $image.width();
+    var $imageH = $image.height();
+    var $containerW = $container.innerWidth($imageW);
+    var $containerH = $container.innerHeight($imageH);
+    var $imageClone = $image.clone();
+    var $imageLarge = $imageClone.width($imageW * 2);
+    var imageLargeW = $imageLarge.width();
+    var imageLargeH = $imageLarge.height();
+    $image.width($imageW).height($imageH);
+    $('.zoomIn').on({
+        mouseenter: function () {
+            $imageLarge.hide().prependTo($container).fadeIn(300);
+        },
+        mousemove: function (e) {
+            var mouseX = e.pageX - $(this).offset().left;
+            var mouseY = e.pageY - $(this).offset().top;
+            var amountMovedX = Math.round(mouseX / $imageW * 100) / 100 * (imageLargeW - $imageW);
+            var amountMovedY = Math.round(mouseY / $imageH * 100) / 100 * (imageLargeH - $imageH);
+            $imageLarge.css({
+                'width': $imageW*2,
+                'height': $imageH*2,
+                'top': amountMovedY + 'px',
+                'left': -amountMovedX + 'px',
+                'position': 'relative'
+            });
+        },
+        mouseleave: function () {
+            $imageLarge.remove();
+        }
+    });
+    }) ;
+
+
+        </script>
+        
+
+
+  </head>
+  <style type="text/css">
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-attachment: fixed;
+}
+
+
+
+td {
+    vertical-align: top;
+}
+#list li{
+list-style-type:none;
+}
+#COLLECTIONS, #PROJECTS, #SHOP_ALL, #CART {
+    display: none;
+}
+.t1:hover{
+    color: red;
+}
+.t2:hover {
+    color: red;
+}
+.t3:hover {
+    color: red;
+}
+.t4:hover {
+    color: red;
+}
+a{
+    position:relative;
+    font-family: arial;
+    font-weight: bold;
+    background-color:rgba(212,212,212,.2);
+    -moz-transition:background-color 1.5s ease;
+    -webkit-transition:background-color 1.5s ease;
+    transition:background-color 1.5s ease;
+}
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,700,300");
+body {
+  /*background-color: #3d3a62;*/
+  font-family: 'Roboto', serif;
+  /*color: #f9e4e4;*/
+}
+body .container-zoom {
+  width: 400px;
+  /*margin-top: 150px;*/
+  /*margin-right: auto;*/
+  /*margin-bottom: 100px;*/
+  /*margin-left: auto;*/
+}
+body .container-zoom h1 {
+  margin: 0 0 10px;
+  /*color: #f9e4e4;*/
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: normal;
+  text-shadow: 0px 2px 1px rgba(1, 37, 46, 0.2);
+  text-align: center;
+}
+body .container-zoom p {
+  font-weight: lighter;
+  /*margin: 0 0 50px;*/
+  /*background-color: #2f2c55;*/
+  /*padding: 12px 8px;*/
+  /*border-radius: 3px;*/
+  font-size: 14px;
+  text-align: center;
+}
+body .container-zoom .zoomIn {
+  /*width:400px;*/
+  overflow: hidden;
+  position: relative;
+  margin: 0px auto;
+  /*border-radius: 5px;*/
+  /*box-shadow: 0px 6px 9px rgba(1, 37, 46, 0.2);*/
+  z-index: 100;
+  cursor: crosshair;
+}
+.cart {
+  text-align: center;
+  font-size:16px;
+  color:white;
+  background-color: black;
+  padding: 10px 80px;
+}
+  </style>
+    <body>
+<!-- <div class="container-zoom" style="{width:300px; height:300px;}">
+   
+  <div class="zoomIn" style="{width:300px; height:300px;}">
+      <img class="zoom" src="http://cdn.shopify.com/s/files/1/0380/2469/products/ADOREDBLACK1.jpg?v=1474512560" alt="img" style="{width:300px; height:300px;}">
+    </div>
+</div> -->
+
+        <div>
+        <h3 style="padding-left:20px">MIDNIGHT STUDIOS</h3>
+
+        <div style="display:inline-block">
+    <table>
+    <tr>
+        <td style="padding-left:20px">
+            <a class="t1">COLLECTIONS</a>
+            <br />
+            <a class="t2">PROJECTS</a>
+            <br />
+            <a class="t3">SHOP ALL</a>
+            <br />
+            <a class="t4">CART</a>
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td id="list" style="width:270px">
+
+            <div id="COLLECTIONS"> 
+                <li><a href="#" style="text-decoration:none">FALL/WINTER 2016</a></li>
+                <li><a href="#" style="text-decoration:none">SPRING/SUMMER 2016</a></li>
+                <li><a href="#" style="text-decoration:none">AUTUMN/WINTER 2015</a></li>
+                <li><a href="#" style="text-decoration:none">SPRING/SUMMER 2015</a></li>
+            </div>
+
+            <div id="PROJECTS"> 
+                <li><br></li>
+                <li>C.R.E.E.P</li>
+                <li>TOKYO</li>
+                <li>NEW YORK CITY</li>
+                <li>CHANDLER</li>
+            </div>
+            <div id="SHOP_ALL"> 
+                
+            </div>
+            <div id="CART"> 
+                <li><br></li>
+                <li><br></li>
+                <li><br></li>
+                <li>Content of 4 </li>
+                <li>Content of 4 </li>
+                <li>Content of 4 </li>
+            </div>   
+               
+        </td>
+        <td >
+        	<!-- http://cdn.shopify.com/s/files/1/0380/2469/products/ADOREDBLACK1.jpg?v=1474512560 -->
+		   
+			<div class="container-zoom" >
+   
+              <div class="zoomIn" >
+                  <img class="zoom" src="cloth1.jpg" width="300px" height="300px">
+            </div>
+            </div>
+        </td>
+        <td style="width:300px">
+        	<h3> ADORED T-SHIRT (BLACK)</h3><br/>
+        	<p>$110.00</p>
+        	<ul>
+        	<li>Short sleeve heavyweight cotton jersey</li>
+			<li>Graphic print on front</li>
+			<li>Vintage wash</li>
+			<li>Spine seam construction</li>
+			<li>Rib knit crewneck collar</li>
+			<li>Made in Los Angeles</li>
+			<li>Size 1-4 is equivalent to S-XL</li>
+			</ul>
+			<span>
+				SIZE
+			<select>
+			  <option value="x-small">x-small</option>
+			  <option value="small">small</option>
+			  <option value="medium">medium</option>
+			  <option value="large">large</option>
+			</select>
+			  </span><br>
+        <button class="cart">ADD TO CART</button>
+        </td>
+    </tr>
+</table>
+
+
+<br><br><br><br><br><br><br><br>
+
+</div>
+
+
+</div>
+  </body>
+</html>
