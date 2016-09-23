@@ -46,8 +46,8 @@
     var $containerH = $container.innerHeight($imageH);
     var $imageClone = $image.clone();
     var $imageLarge = $imageClone.width($imageW);
-    var imageLargeW = $imageLarge.width();
-    var imageLargeH = $imageLarge.height();
+    var imageLargeW = $imageLarge.width($imageLarge * 2);
+    var imageLargeH = $imageLarge.height($imageLarge * 2);
     $image.width($imageW).height($imageH);
     $('.zoomIn').on({
         mouseenter: function () {
