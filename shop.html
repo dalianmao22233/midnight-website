@@ -46,7 +46,6 @@
     var $containerH = $container.innerHeight($imageH);
     var $imageClone = $image.clone();
     var $imageLarge = $imageClone.width($imageW * 2);
-    
     var imageLargeW = $imageLarge.width();
     var imageLargeH = $imageLarge.height();
     $image.width($imageW).height($imageH);
@@ -60,6 +59,8 @@
             var amountMovedX = Math.round(mouseX / $imageW * 100) / 100 * (imageLargeW - $imageW);
             var amountMovedY = Math.round(mouseY / $imageH * 100) / 100 * (imageLargeH - $imageH);
             $imageLarge.css({
+                'width': $imageW*2,
+                'height': $imageH*2,
                 'top': amountMovedY + 'px',
                 'left': -amountMovedX + 'px',
                 'position': 'relative'
@@ -129,12 +130,11 @@ body {
   /*color: #f9e4e4;*/
 }
 body .container-zoom {
-  width: 600px;
-  height: 600px;
+  width: 400px;
   /*margin-top: 150px;*/
-  margin-right: auto;
+  /*margin-right: auto;*/
   /*margin-bottom: 100px;*/
-  margin-left: auto;
+  /*margin-left: auto;*/
 }
 body .container-zoom h1 {
   margin: 0 0 10px;
@@ -155,8 +155,7 @@ body .container-zoom p {
   text-align: center;
 }
 body .container-zoom .zoomIn {
-  width:600px;
-  height:600px;
+  /*width:400px;*/
   overflow: hidden;
   position: relative;
   margin: 0px auto;
@@ -227,7 +226,7 @@ body .container-zoom .zoomIn {
 			<div class="container-zoom" >
    
               <div class="zoomIn" >
-                  <img class="zoom" src="cloth1.jpg" width="300px" height="300px" >
+                  <img class="zoom" src="cloth1.jpg" width="300px" height="300px">
             </div>
             </div>
         </td>
